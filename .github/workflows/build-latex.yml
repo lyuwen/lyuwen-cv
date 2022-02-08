@@ -32,9 +32,9 @@ jobs:
 
       - name: Prepare for publish
         run: |
-          mkdir publish
-          cp ${{ steps.texbuild.outputs.output }} publish/LFu_CV.pdf
-          cd publish && bash ../prepare_for_publish.sh
+          mkdir public
+          cp ${{ steps.texbuild.outputs.output }} public/LFu_CV.pdf
+          cd public && bash ../prepare_for_publish.sh
         
       - uses: actions/upload-artifact@v2
         with:
