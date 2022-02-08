@@ -33,10 +33,17 @@ jobs:
       - name: Prepare for publish
         run: |
           mkdir publish
-          mv ${{ steps.texbuild.outputs.output }} publish/
+          cp ${{ steps.texbuild.outputs.output }} publish/LFu_CV.pdf
           cd publish && bash ../prepare_for_publish.sh
         
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ steps.texbuild.outputs.output }}
           path: ${{ steps.texbuild.outputs.output }}
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
