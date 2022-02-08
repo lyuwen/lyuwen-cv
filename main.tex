@@ -1,0 +1,340 @@
+\documentclass[
+  a4paper,
+  12pt
+]{article}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+% Use Times font
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+% Hyphenation: Disabled.
+\usepackage[none]{hyphenat}
+% PDF settings and properties.
+\usepackage{hyperref}
+% Geometry package for page margins.
+\usepackage[
+left=0.50in,
+right=0.50in,
+top=0.40in,
+bottom=0.40in,
+nohead,
+includefoot]{geometry}
+
+\pagestyle{empty}
+
+%% Symbols (unicode).
+\newcommand{\BulletSymbol}{{\normalfont\fontsize{6.5}{7.8}\selectfont\raisebox{0.17em}{$\bullet$}}}
+\newcommand{\SubBulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{$\bullet$}}}
+\newcommand{\TildeSymbol}{{\normalfont\char"007E}}
+
+\makeatletter
+% Contacts
+\gdef\@contacts{}
+\newcommand{\contacts}[1]{%
+  \gdef\@contacts{#1}%
+}
+% Title page.
+\renewcommand{\maketitle}{
+    \begin{center}
+    \textbf{\huge\@author}\\
+    \vspace*{0.5\baselineskip}
+    \@contacts\\
+    \end{center}
+}
+\makeatother
+
+\makeatletter
+% PDF settings and properties.
+\AtBeginDocument{
+\hypersetup{
+pdftitle={Curriculum Vitae of \@author},
+pdfauthor={\@author},
+pdfcreator={PDFLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+% hidelinks,
+breaklinks}
+}
+\makeatother
+
+\titleformat{\section}[block]
+{\normalfont\bfseries}
+{}{0pt}{\uppercase}
+\titlespacing{\section}{0 in}{0 in}{0 in}
+\setlength\parindent{0pt}
+
+% Abbreviations for months.
+\newcommand{\LongMonth}[1]{%
+\ifcase#1\relax
+\or January%
+\or February%
+\or March%
+\or April%
+\or May%
+\or June%
+\or July%
+\or August%
+\or September%
+\or October%
+\or November%
+\or December%
+\fi}
+\newcommand{\ShortMonth}[1]{%
+\ifcase#1\relax
+\or Jan%
+\or Feb%
+\or Mar%
+\or Apr%
+\or May%
+\or Jun%
+\or Jul%
+\or Aug%
+\or Sep%
+\or Oct%
+\or Nov%
+\or Dec%
+\fi}
+
+% Select datestamp format.
+\def\DatestampFormatSelection{2}
+
+% Datestamp format: {yyyy}{MM}{dd} ---> yyyy-MM-dd (e.g., 2010-12-31).
+\ifnum\DatestampFormatSelection=1
+\newcommand{\DatestampYMD}[3]{\mbox{#1-#2-#3}}
+\newcommand{\DatestampYM}[2]{\mbox{#1-#2}}
+\newcommand{\DatestampY}[1]{#1}
+\fi
+
+% Datestamp format: {yyyy}{MM}{dd} ---> MMM yyyy (e.g., Dec 2010).
+\ifnum\DatestampFormatSelection=2
+\newcommand{\DatestampYMD}[3]{\mbox{\ShortMonth{#2} #1}}
+\newcommand{\DatestampYM}[2]{\mbox{\ShortMonth{#2} #1}}
+\newcommand{\DatestampY}[1]{#1}
+\fi
+
+% Datestamp format: {yyyy}{MM}{dd} ---> MMMM yyyy (e.g., December 2010).
+\ifnum\DatestampFormatSelection=3
+\newcommand{\DatestampYMD}[3]{\mbox{\LongMonth{#2} #1}}
+\newcommand{\DatestampYM}[2]{\mbox{\LongMonth{#2} #1}}
+\newcommand{\DatestampY}[1]{#1}
+\fi
+
+% Datestamp format: {yyyy}{MM}{dd} ---> yyyy (e.g., 2010).
+\ifnum\DatestampFormatSelection=4
+\newcommand{\DatestampYMD}[3]{#1}
+\newcommand{\DatestampYM}[2]{#1}
+\newcommand{\DatestampY}[1]{#1}
+\fi
+
+\setlist{align=parleft,left=0.2em,nolistsep}
+\renewcommand\labelitemi{\BulletSymbol}
+
+
+\author{Lyuwen Fu}
+\contacts{ \href{mailto:lyuwen.fu@columbia.edu}{lyuwen.fu@columbia.edu} \,\SubBulletSymbol\, +86 180-7290-1557 \,\SubBulletSymbol\, \href{https://lyuwenfu.me}{lyuwenfu.me} }
+
+
+\begin{document}
+
+\maketitle
+
+%% EDUCATION
+\section{Education}
+
+{\textbf{Columbia University}},
+New York, New York
+
+Ph.D. in
+{Materials Science}
+\hfill
+\DatestampYMD{2017}{01}{10} --
+\DatestampYMD{2021}{10}{20}
+\begin{itemize}
+\item Advisor: Professor Chris Marianetti
+\item Research Focus: Generic first-principle computation on phonons and phonon-phonon interactions
+\item Thesis: Thermodynamics of Interacting Phonons
+\end{itemize}
+
+
+{\textbf{Columbia University}},
+New York, New York
+
+Master of Science in
+{Materials Science}
+\hfill
+\DatestampYMD{2015}{09}{01} --
+\DatestampYMD{2016}{12}{23}
+\begin{itemize}
+\item Cumulative GPA: 3.81 / 4.00
+\item Coursework: Solid State Physics, Computing Electronic Structure of Complex Materials, Theory of Crystalline Materials, Mechanical Behavior of Materials, etc.
+\end{itemize}
+
+
+{\textbf{University of Science and Technology Beijing}},
+Beijing, China
+
+Bachelor of Engineering in
+{Materials Physics}
+\hfill
+\DatestampYMD{2011}{09}{01} --
+\DatestampYMD{2015}{06}{26}
+\begin{itemize}
+\item Adviser: Professor Jiao Teng
+\item Thesis: Research on the Quantum Transport Properties of Resistive RAM
+\item Cumulative GPA: 3.46 / 4.00
+\end{itemize}
+
+
+%% RESEARCH
+\section{Research}
+
+{\textbf{Columbia University}},
+New York, New York
+
+Department of Applied Physics and Applied Mathematics
+\hfill
+\DatestampYMD{2016}{05}{17} --
+\DatestampYMD{2021}{10}{20}
+\begin{itemize}
+\item Project: Thermodynamics of interacting phonons
+\item Adviser: Professor Chris Marianetti
+\item Develop group theoretical approach to extract arbitrary order phonons and their interactions in terms of space group \emph{irreducible derivatives}.
+\item Develop finite difference algorithm which extracts all irreducible derivatives in the smallest possible supercells with the fewest possible calculations.
+\item Develop software to compute thermal dynamic properties using the extracted phonon interaction data.
+\item Perform high-throughput computations on HPC clusters.
+\item Manage an in-house cluster of more than 80 nodes.
+% \item Derived equation for order $N$ volume derivative of phonons in terms of order $\mathcal{N}=N+2$ irreducible derivatives; the former are easily computed,
+% and serve as a stringent test for the latter.
+\end{itemize}
+
+{\textbf{University of Science and Technology Beijing}},
+Beijing, China
+
+%\item
+Undergraduate Thesis,
+Department of Materials Physics and Chemistry
+\hfill
+\DatestampYMD{2015}{02}{01} --
+\DatestampYMD{2015}{06}{25}
+\begin{itemize}
+\item Project: Research on the Quantum Transport Properties of Resistive RAM
+\item Adviser: Professor Jiao Teng
+\item Design the synthesis process and the pattern of ReRAM thin film. Realized the resistive switch phenomenon in ReRAM.
+\item Research on the theoretical background of ReRAM and the mechanism and conditions for the Quantized Anisotropic Magnetoresistance.
+\item Study the resistive switch properties and electron transport properties of the ReRAM samples.
+\end{itemize}
+
+%{\textbf{University of Science and Technology Beijing}},
+%Beijing, China
+
+\vspace{.25em}
+Undergraduate Student Research, 
+Institute for Advanced Materials and Technology
+\hfill
+\DatestampYMD{2013}{10}{05} --
+\DatestampYMD{2014}{05}{31}
+\begin{itemize}
+\item Project: Research on the Performance Study of One-dimensional IrO$_{2}$ Nano-Array Electrochemical Sensor
+\item Adviser: Professor Huimin Meng
+\item Develop a new method of the synthesis of the one-dimensional IrO$_{2}$ nanometer array electrodes and studied electrochemistry properties of the electrode.
+\end{itemize}
+
+
+\section{Skills}
+\begin{itemize}
+\item
+Programming Languages:   
+Proficient in
+Python, C/C++, 
+Familiar with Objective-C, Java, C\#, Fortran.
+%HTML, 
+\item
+First-principle Computation:   
+VASP, Quantum ESSRESSO, Abinit.
+\item
+Other Softwares:    
+{\LaTeX}, 
+Docker,
+MATLAB, 
+Mathematica, 
+Blender,
+Adobe Photoshop.
+\end{itemize}
+
+
+\section{Research Interests}
+First-principle computation and simulation, Computational materials science. Phonon and phonon interactions. Materials thermodynamics and thermal transport.
+
+
+\section{Publications}
+
+\begin{enumerate}
+\item
+\href{https://doi.org/10.1103/PhysRevB.100.014303}
+{\underline{Fu, L.}, Kornbluth, M., Cheng, Z., \& Marianetti, C. A. (2019). 
+Group theoretical approach to computing phonons and their interactions. 
+\textit{Physical Review B}, 100(1), 014303.}
+%
+\item
+\href{https://doi.org/10.1038/s42005-020-00483-2}{
+Bryan, M. S., \underline{Fu, L.}, et al. (2020). 
+Nonlinear propagating modes beyond the phonons in fluorite-structured crystals.
+\textit{Communications Physics}, 3(1), 1-7.}
+%
+\item
+\href{https://doi.org/10.1080/09500839.2020.1833375}{
+Ding, X., Yao, T., \underline{Fu, L.}, et al. (2020).
+Magnetic, transport and thermal properties of $\delta$-phase UZr$_{2}$.
+\textit{Philosophical Magazine Letters}, 1-11.
+}
+%
+\item
+\href{https://doi.org/10.1016/j.actamat.2021.116934}{
+C.A. Dennett, \dots, \underline{L. Fu}, et al. (2021).
+An Integrated Experimental and Computational Investigation of Defect and Microstructural Effects on Thermal Transport in Thorium Dioxide, %
+\textit{Acta Mater.}, 213, 116934.
+}
+%
+% \item
+% \href{https://arxiv.org/abs/1903.05253}{
+% Wieteska, A., Foutty, B., Guguchia, Z., Flicker, F., Mazel, B., \underline{Fu, L.}, ... \& Pasupathy, A. (2019).
+% Uniaxial Strain Tuning of Superconductivity in 2$H$-NbSe$_{2}$.
+% \textit{arXiv preprint} arXiv:1903.05253.}
+\end{enumerate}
+
+
+\section{Conferences}
+
+\begin{enumerate}
+\item
+\href{https://meetings.aps.org/Meeting/MAR18/Event/322388}{
+Fu, L., Kornbluth, M., \& Marianetti, C. A. (2018).
+An optimal approach to computing phonons and their interactions via finite difference.
+APS March Meeting 2018, X29.00006.
+}
+%
+\item
+\href{https://meetings.aps.org/Meeting/MAR19/Session/H22.3}{
+Fu, L., Kornbluth, M., Cheng, Z., \& Marianetti, C. A. (2019).
+An optimal approach to computing phonons and their interactions via finite displacements.
+APS March Meeting 2019, H22.00003.
+}
+%
+\item
+\href{https://meetings.aps.org/Meeting/MAR20/Session/P44.9}{
+Fu, L., Mathis, M., Xiao, E., \& Marianetti, C. A. (2020).
+Phonon interactions in rock salt and fluorite structures.
+APS March Meeting 2020, P44.00009.
+} (\emph{Meeting canceled due to COVID-19 pandemic})
+\end{enumerate}
+
+\end{document}
