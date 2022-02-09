@@ -1,6 +1,11 @@
 % cv.cls
+%
 % Document class for CV
+%
 % (C) 2022 Lyuwen Fu
+%
+% Adapted from https://github.com/zachscrivena/simple-resume-cv
+%
 \ProvidesClass{cv}[2022/02/08 version 1.0.0]
 \NeedsTeXFormat{LaTeX2e}
 
