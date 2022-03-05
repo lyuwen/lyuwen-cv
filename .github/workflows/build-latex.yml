@@ -29,11 +29,17 @@ jobs:
         id: texbuild
         with:
           file: 'main.tex'
+          
+      - uses: lyuwen/build-latex-action@chinese
+        id: texbuild-cn
+        with:
+          file: 'main_zhcn.tex'
 
       - name: Prepare for publish
         run: |
           mkdir public
           cp ${{ steps.texbuild.outputs.output }} public/LFu_CV.pdf
+          cp ${{ steps.texbuild-cn.outputs.output }} public/LFu_CV_cn.pdf
           cd public && bash ../prepare_for_publish.sh
         
       - uses: actions/upload-artifact@v2

@@ -8,6 +8,10 @@ cat > index.html << EOF
   <a href="LFu_CV.pdf">CV</a>
   Created on $(date -u "+%Y-%m-%d %H:%M:%S") UTC.
 </p>
+<p>
+  <a href="LFu_CV_cn.pdf">Chinese CV</a>
+  Created on $(date -u "+%Y-%m-%d %H:%M:%S") UTC.
+</p>
 
 </body>
 </html>
