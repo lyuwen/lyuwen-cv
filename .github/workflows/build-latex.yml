@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ 'main', 'chinese' ]
   pull_request:
     branches: [ main ]
 
@@ -29,11 +29,17 @@ jobs:
         id: texbuild
         with:
           file: 'main.tex'
+          
+      - uses: lyuwen/build-latex-action@chinese
+        id: texbuild-cn
+        with:
+          file: 'main_zhcn.tex'
 
       - name: Prepare for publish
         run: |
           mkdir public
           cp ${{ steps.texbuild.outputs.output }} public/LFu_CV.pdf
+          cp ${{ steps.texbuild-cn.outputs.output }} public/LFu_CV_cn.pdf
           cd public && bash ../prepare_for_publish.sh
         
       - uses: actions/upload-artifact@v2
