@@ -23,10 +23,17 @@
 {\textbf{之江实验室}},
 杭州, 浙江, 中国
 
-智能计算研究院, 高级研究专员
+智能计算研究院, 高级研究专员, 助理研究员（自然科学）
 \hfill
 \DatestampYMD{2022}{07}{12} --
 至今
+\begin{itemize}
+\item 完成对MuST多散射理论密度泛函计算软件的算法优化和国产超算架构上的移植优化工作，实现最高100倍的算法优化以及最高20倍的硬件优化
+\item 开展强关联多体问题的模型计算工作
+\item 开展基于群论的材料声子及声子间相互作用计算方法以及配套材料数据库的开发工作
+\item 开展基于群论的深度神经网络势函数的开发
+\item 开展应用组数值计算集群的搭建和运维，提供超百万核时算力
+\end{itemize}
 
 %% EDUCATION
 \section{教育经历}
@@ -91,7 +98,7 @@ Department of Applied Physics and Applied Mathematics
 \item 实现相比于现有同类软件超过10倍的计算效率提升;
 \item 设计出可广泛应用在多种材料性能研究的模块化软件包;
 \item 在高性能计算机集群上执行超过10万次第一性原理计算作业并管理课题组内超过80个节点的计算机集群;
-\item 软件包主页：\href{https://marianettigroup.github.io}{marianettigroup.github.io}。
+\item 软件包文档主页：\href{https://marianettigroup.github.io}{marianettigroup.github.io}。
 % \item Derived equation for order $N$ volume derivative of phonons in terms of order $\mathcal{N}=N+2$ irreducible derivatives; the former are easily computed,
 % and serve as a stringent test for the latter.
 \end{itemize}
@@ -134,29 +141,36 @@ Department of Applied Physics and Applied Mathematics
 \item
 编程语言:   
 Proficient in
-Python, C/C++, 
-Familiar with Objective-C, Java, C\#, Fortran.
+Python, C/C++, Fortran, 
+Familiar with Objective-C, Java, C\#.
 %HTML, 
 \item
 第一性原理计算: 
-VASP, Quantum ESSRESSO, Abinit.
+VASP, Quantum ESSRESSO, Abinit, MuST.
 \item
 其他软件:    
 {\LaTeX}, 
 Docker,
-MATLAB, 
-Mathematica, 
+Singularity,
 Blender,
+Ansible,
+% MATLAB,
+% Mathematica,
 Adobe Photoshop.
 \end{itemize}
 
 
 \section{研究重心}
 第一性原理计算和模拟;
-计算材料科学;
+% 计算材料科学;
 声子和声子间相互作用;
 材料热力学及热传导性能; 
-凝聚态物理。
+% 凝聚态物理；
+强关联多体物理；
+材料智能计算；
+高性能并行计算与加速计算;
+容器化计算。
+
 
 
 \section{发表文章}
@@ -239,24 +253,39 @@ Validating First-Principles Phonon Lifetimes via Inelastic Neutron Scattering,
 \begin{enumerate}
 \item
 \href{https://meetings.aps.org/Meeting/MAR18/Event/322388}{
-Fu, L., Kornbluth, M., \& Marianetti, C. A. (2018).
+\underline{Fu, L.}, Kornbluth, M., \& Marianetti, C. A. (2018).
 An optimal approach to computing phonons and their interactions via finite difference.
 APS March Meeting 2018, X29.00006.
 }
 %
 \item
 \href{https://meetings.aps.org/Meeting/MAR19/Session/H22.3}{
-Fu, L., Kornbluth, M., Cheng, Z., \& Marianetti, C. A. (2019).
+\underline{Fu, L.}, Kornbluth, M., Cheng, Z., \& Marianetti, C. A. (2019).
 An optimal approach to computing phonons and their interactions via finite displacements.
 APS March Meeting 2019, H22.00003.
 }
 %
 \item
 \href{https://meetings.aps.org/Meeting/MAR20/Session/P44.9}{
-Fu, L., Mathis, M., Xiao, E., \& Marianetti, C. A. (2020).
+\underline{Fu, L.}, Mathis, M., Xiao, E., \& Marianetti, C. A. (2020).
 Phonon interactions in rock salt and fluorite structures.
 APS March Meeting 2020, P44.00009.
 } (\emph{会议由于新冠疫情取消})
+\end{enumerate}
+
+
+\section{发明专利}
+
+\begin{enumerate}
+\item
+\underline{富律文},郑欢欢,杨树祥,张峻溪,朱正平,杨星辰.
+基于申威主从核架构的异步并行矩阵计算优化方法.
+2023.11, 已受理
+%
+\item
+张峻溪,杨树祥,\underline{富律文},朱正平,郑欢欢,杨星辰.
+一种Fortran科学计算软件中函数的自动化无损分离方法.
+2023.11, 已受理
 \end{enumerate}
 
 \end{document}
