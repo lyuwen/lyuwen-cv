@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       
       - uses: lyuwen/build-latex-action@v1
         id: texbuild
@@ -42,13 +42,13 @@ jobs:
           cp ${{ steps.texbuild-cn.outputs.output }} public/LFu_CV_cn.pdf
           cd public && bash ../prepare_for_publish.sh
         
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.texbuild.outputs.output }}
           path: ${{ steps.texbuild.outputs.output }}
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
