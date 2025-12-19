@@ -18,6 +18,34 @@
 
 \maketitle
 
+%% PROJECT
+\section{项目经历}
+
+{\textbf{021科学基础模型}},
+模型CoT推理训练负责人
+\hfill
+\DatestampYMD{2025}{04}{01} --
+至今
+
+\begin{itemize}
+\item 主导构建 CoT 训练数据从分类、合成、筛选、验证到训练与评测的全链路自动化迭代管线，建立可量化的思维链质量评估体系；累计构建超千万级 CoT 数据池，最终筛选形成约 300 万高质量 CoT 数据，持续驱动模型推理能力稳定提升
+\item 设计并落地模型 CoT 推理能力系统性提升方案，指导模型在科学领域复杂任务推理能力的演进
+\item 研发支持万亿参数规模的大模型高效微调训练框架，复用并扩展预训练阶段的并行与性能优化策略，显著提升后训练阶段的训练效率与实验迭代效率
+\item 推动 021 科学基础模型（236B）在复杂推理与科学问答任务上的整体表现，推理能力接近主流领先开源模型水平
+\end{itemize}
+
+{\textbf{021科学基础模型}},
+模型训练框架调优负责人
+\hfill
+\DatestampYMD{2024}{04}{03} --
+\DatestampYMD{2025}{04}{01}
+
+\begin{itemize}
+\item 主导大规模预训练数据处理框架开发，构建覆盖数据清洗、质量验证与一致性检查的数据管线，累计沉淀约 20T 高质量预训练数据
+\item 主导预训练框架在自由算力集群上的软硬件适配与性能调优，系统性优化数据并行、模型并行等训练策略，在多种模型规模下实现整体训练性能提升不少于 50\%
+\item 推动基础模型团队在预训练数据、训练框架与评测流程上的技术体系从 0 到 1 搭建并完成初期验证，为 021 科学基础模型的规模化训练与后续演进奠定工程与方法基础
+\end{itemize}
+
 %% EXPERIENCE
 \section{工作经历}
 
@@ -31,12 +59,30 @@
 
 高级研究专员, 助理研究员（自然科学）
 \begin{itemize}
-\item 负责深度思考模型的数据合成、训练调优与评测反馈工作，持续提升基座模型的推理能力，推动模型推理能力对标业内领先水平
-\item 负责千亿及以上参数大语言模型在千卡集群分布式预训练、微调和强化学习的训练工作，以及预训练和微调训练框架开发和优化以及集群与训练框架的软硬件协同调优；实现万亿参数模型预训练和后训练
-\item 带领团队开展材料领域知识模型、材料设计模型以及材料设计智能体的开发，负责数据生产工具链和模型训练算法开发，实现基础能力与开源同等规模模型持平、专业领域超越开源模型性能
-\item 【项目】科学基础模型(千亿参数):参与15T tokens预训练数据准备，负责预训练算法的适配优化和指令微调算法的开发、模型预训练和深度思考质量微调训练
-\item 【项目】合金材料模型(32B):负责领域训练数据准备、模型增量预训练、质量微调以及深度思考训练
+\item 负责 021 科学基础模型的训练调优与 CoT 推理训练，持续推进模型推理能力演进，使整体表现接近主流领先开源模型水平
+\item 负责材料科学领域模型训练全流程，包括训练数据准备、模型增量预训练、指令微调以及 CoT 推理训练
+\item 负责材料设计模型及材料设计智能体的研发，主导数据生产工具链与模型训练算法的设计与实现，支撑材料设计相关任务的模型能力落地
+% \item 负责深度思考模型的数据合成、训练调优与评测反馈工作，持续提升基座模型的推理能力，推动模型推理能力对标业内领先水平
+% \item 负责千亿及以上参数大语言模型在千卡集群分布式预训练、微调和强化学习的训练工作，以及预训练和微调训练框架开发和优化以及集群与训练框架的软硬件协同调优；实现万亿参数模型预训练和后训练
+% \item 带领团队开展材料领域知识模型、材料设计模型以及材料设计智能体的开发，负责数据生产工具链和模型训练算法开发，实现基础能力与开源同等规模模型持平、专业领域超越开源模型性能
+% \item 【项目】科学基础模型(千亿参数):参与15T tokens预训练数据准备，负责预训练算法的适配优化和指令微调算法的开发、模型预训练和深度思考质量微调训练
+% \item 【项目】合金材料模型(32B):负责领域训练数据准备、模型增量预训练、质量微调以及深度思考训练
 \end{itemize}
+
+\section{技能总结}
+\begin{itemize}
+\item
+大语言模型:  熟悉PyTorch、Megatron-LM、transformers、vLLM、SGLang等大模型训练、推理相关工具，了解DeepSpeed、FSDP、模型并行等分布式训练技术，具备基于Megatron-LM开发调优经验
+\item
+编程语言:   
+熟练掌握
+Python, C/C++, Fortran
+%HTML, 
+\item
+第一性原理计算: 
+VASP, Quantum ESSRESSO, Abinit, MuST.
+\end{itemize}
+
 
 %% EDUCATION
 \section{教育经历}
@@ -139,44 +185,20 @@ Department of Applied Physics and Applied Mathematics
 \end{itemize}
 
 
-\section{技能总结}
-\begin{itemize}
-\item
-编程语言:   
-Proficient in
-Python, C/C++, Fortran, 
-Familiar with Objective-C, Java, C\#.
-%HTML, 
-\item
-第一性原理计算: 
-VASP, Quantum ESSRESSO, Abinit, MuST.
-\item
-其他软件:    
-{\LaTeX}, 
-Docker,
-Singularity,
-Blender,
-Ansible,
-% MATLAB,
-% Mathematica,
-Adobe Photoshop.
-\end{itemize}
-
-
-\section{研究重心}
-第一性原理计算和模拟;
-% 计算材料科学;
-声子和声子间相互作用;
-材料热力学及热传导性能; 
-% 凝聚态物理；
-强关联多体物理；
-材料智能计算；
-高性能并行计算与加速计算;
-容器化计算。
+% \section{研究重心}
+% 第一性原理计算和模拟;
+% % 计算材料科学;
+% 声子和声子间相互作用;
+% 材料热力学及热传导性能;
+% % 凝聚态物理；
+% 强关联多体物理；
+% 材料智能计算；
+% 高性能并行计算与加速计算;
+% 容器化计算。
 
 
 
-\section{发表文章}
+\section{代表性论文}
 
 \begin{enumerate}
 \item
@@ -203,32 +225,32 @@ Magnetic, transport and thermal properties of $\delta$-phase UZr$_{2}$.
 
 第三作者, SCI-4区, 影响因子: 0.980, 11页
 %
-\item
-\href{https://doi.org/10.1016/j.actamat.2021.116934}{
-C.A. Dennett, \dots, \underline{L. Fu}, et al. (2021).
-An Integrated Experimental and Computational Investigation of Defect and Microstructural Effects on Thermal Transport in Thorium Dioxide, %
-\textit{Acta Mater.}, 213, 116934.
-}
-
-第七作者, SCI-1区, 影响因子: 8.203, 13页
+% \item
+% \href{https://doi.org/10.1016/j.actamat.2021.116934}{
+% C.A. Dennett, \dots, \underline{L. Fu}, et al. (2021).
+% An Integrated Experimental and Computational Investigation of Defect and Microstructural Effects on Thermal Transport in Thorium Dioxide, %
+% \textit{Acta Mater.}, 213, 116934.
+% }
 %
-\item
-\href{https://doi.org/10.1103/PhysRevB.106.014314}{
-M. A. Mathis, A. Khanolkar, \underline{L. Fu}, et al. (2022).
-Generalized quasiharmonic approximation via space group irreducible derivatives,
-\textit{Physical Review B}, 106, 014314.
-}
-
-第三作者, SCI-2区, 影响因子: 4.036, 23页
-
-\item
-\href{https://doi.org/10.1103/PhysRevB.106.144310}{
-E. Xiao, H. Ma, M. S. Bryan, \underline{L. Fu}, et al. (2022).
-Validating First-Principles Phonon Lifetimes via Inelastic Neutron Scattering,
-\textit{Physical Review B}, 106, 144310.
-}
-
-第四作者, SCI-2区, 影响因子: 4.036, 6页
+% 第七作者, SCI-1区, 影响因子: 8.203, 13页
+% %
+% \item
+% \href{https://doi.org/10.1103/PhysRevB.106.014314}{
+% M. A. Mathis, A. Khanolkar, \underline{L. Fu}, et al. (2022).
+% Generalized quasiharmonic approximation via space group irreducible derivatives,
+% \textit{Physical Review B}, 106, 014314.
+% }
+%
+% 第三作者, SCI-2区, 影响因子: 4.036, 23页
+%
+% \item
+% \href{https://doi.org/10.1103/PhysRevB.106.144310}{
+% E. Xiao, H. Ma, M. S. Bryan, \underline{L. Fu}, et al. (2022).
+% Validating First-Principles Phonon Lifetimes via Inelastic Neutron Scattering,
+% \textit{Physical Review B}, 106, 144310.
+% }
+%
+% 第四作者, SCI-2区, 影响因子: 4.036, 6页
 
 %
 % \item

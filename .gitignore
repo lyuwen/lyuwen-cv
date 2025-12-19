@@ -8,3 +8,4 @@
 *.synctex.gz
 publish
 .DS_Store
+.*.swp
