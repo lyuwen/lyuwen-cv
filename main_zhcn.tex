@@ -22,16 +22,28 @@
 \section{项目经历}
 
 {\textbf{021科学基础模型}},
-模型CoT推理训练负责人
+模型Agent能力训练技术负责人
+\hfill
+\DatestampYMD{2026}{01}{01} --
+至今
+
+\begin{itemize}
+\item 负责模型 \textbf{Agentic Coding} 能力建设，搭建数据生成、清洗、评测与训练闭环，开展 SFT / RL 数据管线开发及训练算法优化
+\item 设计并开发 021 模型 \textbf{Agent Harness}，完善面向多轮工具调用与代码任务的 SFT / RL 训练框架，支撑 Agent 能力规模化训练与评测
+\item 搭建支持 \textbf{1,000+ 容器并发}的 Agent 执行环境集群，面向大规模轨迹生成、数据合成与强化学习 rollout 提供高并发沙箱基础设施
+\end{itemize}
+
+{\textbf{021科学基础模型}},
+模型CoT深度思考训练负责人
 \hfill
 \DatestampYMD{2025}{04}{01} --
-至今
+\DatestampYMD{2026}{01}{01}
 
 \begin{itemize}
 \item 主导构建 CoT 训练数据从分类、合成、筛选、验证到训练与评测的全链路自动化迭代管线，建立可量化的思维链质量评估体系；累计构建超千万级 CoT 数据池，最终筛选形成约 300 万高质量 CoT 数据，持续驱动模型推理能力稳定提升
 \item 设计并落地模型 CoT 推理能力系统性提升方案，指导模型在科学领域复杂任务推理能力的演进
 \item 研发支持万亿参数规模的大模型高效微调训练框架，复用并扩展预训练阶段的并行与性能优化策略，显著提升后训练阶段的训练效率与实验迭代效率
-\item 推动 021 科学基础模型（236B）在复杂推理与科学问答任务上的整体表现，推理能力接近主流领先开源模型水平
+\item 提升 021 科学基础模型（236B）在复杂推理与科学问答任务上的整体表现，推理能力接近主流领先开源模型水平
 \end{itemize}
 
 {\textbf{021科学基础模型}},
@@ -57,11 +69,12 @@
 \DatestampYMD{2022}{07}{12} --
 至今
 
-高级研究专员, 助理研究员（自然科学）
+研究专家, 助理研究员（自然科学）
 \begin{itemize}
-\item 负责 021 科学基础模型的训练调优与 CoT 推理训练，持续推进模型推理能力演进，使整体表现接近主流领先开源模型水平
-\item 负责材料科学领域模型训练全流程，包括训练数据准备、模型增量预训练、指令微调以及 CoT 推理训练
-\item 负责材料设计模型及材料设计智能体的研发，主导数据生产工具链与模型训练算法的设计与实现，支撑材料设计相关任务的模型能力落地
+\item 聚焦 021 模型 Coding Agent 与 SWE 能力建设，负责 Agent Harness、数据管线、SFT / RL 训练框架开发及训练算法优化
+\item 开展 021 科学基础模型训练与推理能力建设，覆盖模型训练调优、CoT 推理训练及后训练方法探索
+\item 完成材料科学领域模型训练全流程建设，包括训练数据构建、增量预训练、指令微调及 CoT 推理训练
+\item 参与材料设计模型与材料设计智能体研发，主导数据生产工具链及训练算法设计与实现，推动模型能力在材料设计任务中的落地
 % \item 负责深度思考模型的数据合成、训练调优与评测反馈工作，持续提升基座模型的推理能力，推动模型推理能力对标业内领先水平
 % \item 负责千亿及以上参数大语言模型在千卡集群分布式预训练、微调和强化学习的训练工作，以及预训练和微调训练框架开发和优化以及集群与训练框架的软硬件协同调优；实现万亿参数模型预训练和后训练
 % \item 带领团队开展材料领域知识模型、材料设计模型以及材料设计智能体的开发，负责数据生产工具链和模型训练算法开发，实现基础能力与开源同等规模模型持平、专业领域超越开源模型性能
@@ -72,7 +85,7 @@
 \section{技能总结}
 \begin{itemize}
 \item
-大语言模型:  熟悉PyTorch、Megatron-LM、transformers、vLLM、SGLang等大模型训练、推理相关工具，了解DeepSpeed、FSDP、模型并行等分布式训练技术，具备基于Megatron-LM开发调优经验
+大语言模型:  熟悉PyTorch、Megatron-LM、slime、transformers、vLLM、SGLang等大模型训练、推理相关工具，了解DeepSpeed、FSDP、模型并行等分布式训练技术，具备基于Megatron-LM、slime的开发调优经验
 \item
 编程语言:   
 熟练掌握
@@ -290,27 +303,38 @@ An optimal approach to computing phonons and their interactions via finite displ
 APS March Meeting 2019, H22.00003.
 }
 %
-\item
-\href{https://meetings.aps.org/Meeting/MAR20/Session/P44.9}{
-\underline{Fu, L.}, Mathis, M., Xiao, E., \& Marianetti, C. A. (2020).
-Phonon interactions in rock salt and fluorite structures.
-APS March Meeting 2020, P44.00009.
-} (\emph{会议由于新冠疫情取消})
+% \item
+% \href{https://meetings.aps.org/Meeting/MAR20/Session/P44.9}{
+% \underline{Fu, L.}, Mathis, M., Xiao, E., \& Marianetti, C. A. (2020).
+% Phonon interactions in rock salt and fluorite structures.
+% APS March Meeting 2020, P44.00009.
+% } (\emph{会议由于新冠疫情取消})
 \end{enumerate}
 
 
 \section{发明专利}
 
+
 \begin{enumerate}
 \item
-\underline{富律文},郑欢欢,杨树祥,张峻溪,朱正平,杨星辰.
-基于申威主从核架构的异步并行矩阵计算优化方法.
-2023.11, 已受理
+郭方泰, \underline{富律文}, 袭向明, 许增辉, 谢冰
+视觉语言大模型理解方法、装置、计算机设备和存储介质
+2026.08, 已授权
 %
 \item
-张峻溪,杨树祥,\underline{富律文},朱正平,郑欢欢,杨星辰.
-一种Fortran科学计算软件中函数的自动化无损分离方法.
-2023.11, 已受理
+戚耀, 廖龙飞, \underline{富律文}, 张胜, 薛贵荣, 陈红阳, 杨江, 宋子奇
+一种训练数据有效性评估方法、系统及装置
+2026.01, 已授权
+% %
+% \item
+% \underline{富律文},郑欢欢,杨树祥,张峻溪,朱正平,杨星辰.
+% 基于申威主从核架构的异步并行矩阵计算优化方法.
+% 2023.11, 已受理
+% %
+% \item
+% 张峻溪,杨树祥,\underline{富律文},朱正平,郑欢欢,杨星辰.
+% 一种Fortran科学计算软件中函数的自动化无损分离方法.
+% 2023.11, 已受理
 \end{enumerate}
 
 \end{document}
